@@ -1,13 +1,12 @@
 const { spawnSync, spawn } = require('child_process');
 const readline = require('readline');
-const { generatePrompt } = require('./generate-prompt');
 const path = require('path');
 
-// Đường dẫn tới script Python và môi trường ảo
+// Đường dẫn đến script Python và môi trường ảo
 const scriptPath = path.resolve(__dirname, '../python/main.py');
 const activateEnvPath = path.resolve(__dirname, '../python/env/bin/activate'); // Đường dẫn môi trường ảo trên Linux
 
-// Hàm kích hoạt môi trường ảo
+// Hàm kích hoạt môi trường ảo (nếu cần)
 function activateVirtualEnv() {
   const activateProcess = spawnSync('bash', ['-c', `source ${activateEnvPath} && echo "Activated virtualenv"`], {
     stdio: 'inherit',
@@ -62,8 +61,8 @@ function createReadlineInterface() {
 async function getUserInput() {
   try {
     // Lấy thông tin phòng khám từ hàm generatePrompt
-    const clinicInfo = await generatePrompt();
-    console.log('Thông tin phòng khám đã sẵn sàng.', clinicInfo);
+    const clinicInfo = { name: 'Phòng khám A', address: 'Địa chỉ 123' }; // Thay bằng cách lấy thông tin thực tế
+    console.log('Thông tin phòng khám đã sẵn sàng:', clinicInfo);
 
     const rl = createReadlineInterface();
 
