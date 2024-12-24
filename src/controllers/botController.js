@@ -1,11 +1,10 @@
-const { activateVirtualEnv, askQuestion } = require('../chatbot/javascript/connec-python')
+const { askQuestion } = require('../chatbot/javascript/connec-python')
 const { generatePrompt } = require('../chatbot/javascript/generate-prompt')
 let getResponse = async (req, res) => {
   let chat = req.body.message;
   console.log(req.body)
 
-  // Kích hoạt môi trường ảo
-  activateVirtualEnv();
+
 
   try {
     // Lấy thông tin phòng khám từ hàm generatePrompt
