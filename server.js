@@ -12,7 +12,7 @@ connectDB();
 
 // Cấu hình middleware cho CORS 
 app.use(cors({
-    origin: 'https://prj-1-front-end.onrender.com/', // Địa chỉ của frontend (bạn có thể thay đổi cho môi trường sản xuất)
+    origin: 'https://prj-1-front-end.onrender.com', // Địa chỉ của frontend (bạn có thể thay đổi cho môi trường sản xuất)
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true, // Cho phép gửi cookie
 }));
