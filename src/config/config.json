@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Letienkhoi1710",
+    "database": "Clinic_Management_Database",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3309,
+    "dialectOptions": {
+      "charset": "utf8mb4"
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "sql12753842",
+    "password": "8uG6yyryVz",
+    "database": "sql12753842",
+    "host": "sql12.freesqldatabase.com",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4"
+    }
+  }
+}
