@@ -2,21 +2,8 @@ const { spawnSync, spawn } = require('child_process');
 const readline = require('readline');
 const path = require('path');
 
-// Đường dẫn đến script Python và môi trường ảo
+// Đường dẫn tới script Python
 const scriptPath = path.resolve(__dirname, '../python/main.py');
-const activateEnvPath = path.resolve(__dirname, '../python/env/bin/activate'); // Đường dẫn môi trường ảo trên Linux
-
-// Hàm kích hoạt môi trường ảo (nếu cần)
-function activateVirtualEnv() {
-  const activateProcess = spawnSync('bash', ['-c', `source ${activateEnvPath} && echo "Activated virtualenv"`], {
-    stdio: 'inherit',
-  });
-
-  if (activateProcess.error) {
-    console.error('Không thể kích hoạt môi trường ảo:', activateProcess.error);
-    process.exit(1);
-  }
-}
 
 // Hàm gửi câu hỏi tới script Python và nhận kết quả trả về
 function askQuestion(question, clinicInfo) {
@@ -93,7 +80,6 @@ async function getUserInput() {
 }
 
 // Kích hoạt môi trường ảo và bắt đầu chương trình
-activateVirtualEnv();
 getUserInput();
 
-module.exports = { askQuestion, activateVirtualEnv };
+module.exports = { askQuestion };
