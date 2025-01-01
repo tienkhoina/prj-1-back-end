@@ -18,10 +18,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "sql12753842",
-    "password": "8uG6yyryVz",
-    "database": "sql12753842",
-    "host": "sql12.freesqldatabase.com",
+    "username": "avnadmin",
+    "password": "AVNS_tKV_GIC_0jV66T-XNp9",
+    "database": "defaultdb",
+    "host": "mysql-6365e85-tienkhoina-5e17.g.aivencloud.com",
+    "port": 25798,
     "dialect": "mysql",
     "dialectOptions": {
       "charset": "utf8mb4"
