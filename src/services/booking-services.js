@@ -147,7 +147,7 @@ JOIN
 LEFT JOIN 
     prebookinginfos ON prebookinginfos.bookingId = bookings.id
 WHERE 
-    u1.id = 16;`;
+    u1.id = ${userId};`;
 
 
     const [results, metadata] = await db.sequelize.query(query);
