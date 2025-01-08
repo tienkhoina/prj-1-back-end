@@ -89,6 +89,7 @@ async function getAllDoctor() {
         name: 'Dr. ' + doc.firstName+' '+doc.lastName,
         image: doc.image,
         speciality: specialtyName.name,
+        gender: doc.gender,
         degree: doc.degree,
         experience: doc.experience===1?doc.experience + ' year':doc.experience + ' years',
         about: doc.info ,
